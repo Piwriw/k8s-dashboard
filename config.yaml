@@ -1,0 +1,4 @@
+system:
+  addr: ":8082"
+  provisioner: "cluster.local/nfs-subdir-external-provisioner"
+  k8SConfigPath: ".kube/config_47"

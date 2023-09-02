@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: a-soft-harbor-data
+  labels:
+    name: a-soft-harbor-data
+    app: harbor
+spec:
+  # storageClassName: 
+  accessModes:
+    - ReadWriteOnce
+    - ReadWriteMany
+  capacity:
+    storage: 20Gi
+  persistentVolumeReclaimPolicy: Retain   #其他：Recycle、Delete
+  nfs:
+    server: 192.168.28.129
+    path: /data/nfs/harbor
+---
